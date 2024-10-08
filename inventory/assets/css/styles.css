@@ -1,0 +1,287 @@
+body {
+	font-family: "Nunito Sans", sans-serif;
+}
+
+table {
+	width: 95%;
+	font-size: 1rem;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+}
+
+tr {
+	margin-bottom: 2rem;
+	font-size: 0.9rem;
+}
+
+th {
+	background: linear-gradient(to bottom, #8c2230 0%, #7c7c7c 100%);
+}
+
+.form-group label {
+	font-size: 0.8rem;
+}
+
+.center {
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.resLabel {
+	display: none;
+}
+
+.formBackground {
+	background-image: url("assets/image/neo-watermark.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 768px) {
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
+		display: block;
+	}
+
+	.res {
+		font-size: 1.2rem;
+	}
+
+	.card {
+		box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	tr {
+		/*margin-left: 10px;
+		margin-right: 10px;*/
+		border-radius: 0px 0px 10px 10px;
+		background-image: url('image/neo-watermark.png');
+		background-size: cover;
+	}
+
+	th,
+	h1 {
+		display: none;
+	}
+
+	.resLabel {
+		display: inline;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.header {
+		background: linear-gradient(to right, #8c2230 0%, #7c7c7c 100%);
+		color: white;
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.chart-container {
+		width: 100%;
+		height: auto; /* Let the container expand based on content */
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.chart-container canvas {
+		height: 400px !important; /* Set a fixed height for the canvas */
+	}
+
+	.mar {
+		margin-top: 90px;
+	}
+}
+
+.smol {
+	font-size: 0.7rem;
+}
+
+.table-container {
+	max-height: 750px;
+	overflow-y: auto;
+}
+
+.print {
+	font-family: sans-serif;
+}
+
+select {
+	background-color: #292f36;
+	color: white;
+	border: none;
+	padding: 8px 15px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.demo {
+	background-image: url("image/DEMO.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@media print {
+	@page {
+		size: landscape;
+	}
+}
+
+/*ID Styling*/
+
+
+#filterContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+#filterContainer h5 {
+	margin: 0;
+}
+
+#filterType {
+	border: none;
+	border-bottom: 2px solid #ccc;
+	background-color: transparent;
+	padding: 5px 10px;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+#filterType:focus {
+	border-color: #007bff;
+}
+
+#filterType option {
+	background-color: #f8f9fa;
+}
+
+.show {
+	display: block;
+}
+
+#sidebar {
+	border: 1px solid #ddd;
+	height: 100vh;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #f8f9fa;
+	overflow-x: hidden;
+	transition: 0.3s;
+	padding-top: 20px;
+	z-index: 1;
+}
+
+#sidebar.active {
+	left: 0;
+}
+
+#content {
+	margin-left: 0;
+	transition: margin-left 0.3s;
+}
+
+#content.active {
+	margin-left: 250px;
+}
+
+.sidebar-toggle {
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.sidebar-link {
+	text-decoration: none;
+	display: block;
+	padding: 10px 15px;
+	color: #333;
+	transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+	background-color: #b8c0c2;
+	color: white;
+}
+
+.list-unstyled {
+	padding-left: 0;
+	margin-bottom: 0;
+	text-decoration: none;
+}
+
+/*Scrollbar*/
+
+*::-webkit-scrollbar {
+	height: 9px;
+	width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-track:hover {
+	background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-track:active {
+	background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #8c2230 0%, #7c7c7c 100%);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #b42c3e 0%, #9f9f9f 100%);
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background-color: #bb2d40;
+}
+
+/*Button*/
+
+/* From Uiverse.io by barisdogansutcu */
+button {
+	font-size: 14px;
+	border-radius: 5px;
+	padding: 7px 18px;
+	border: none;
+	font-weight: 500;
+	background-color: #b02b3d;
+	color: white;
+	cursor: pointer;
+	margin-top: 25px;
+	transition: 0.2s;
+}
+
+button:hover {
+	box-shadow: 0px 3px 8px rgba(187, 45, 64, 0.5);
+}
+
+button:active {
+	transform: translate(0em, 0.2em);
+}
+
